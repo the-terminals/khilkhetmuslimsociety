@@ -3,24 +3,29 @@ export const eventData = {
   subtitle: "ওয়ে টু জান্নাহ",
   presenter: "ইসলাম জোন প্রেজেন্টস",
   organizer: "খিলক্ষেত মুসলিম সোসাইটি",
-  date: "১৩ই ডিসেম্বর, ২০২৫",
+  date: "১৩ই ডিসেম্বর, ২০২৫, শনিবার",
+  time: "সকাল ৯ টায়",
   dateISO: "2025-12-13T09:00:00+06:00",
-  location: "খিলক্ষেত, ঢাকা, বাংলাদেশ",
-  locationDetails: "খিলক্ষেত এলাকা, উত্তরা, ঢাকা-১২২৯",
+  location: "গ্রিন পার্ক, মোহাম্মদী হাউজিং",
+  locationDetails: "খিলক্ষেত, ঢাকা - ১২২৯",
   registrationLink: "https://ylnk.cc/kms",
   
   speakers: [
-    { name: "মুফতি তারিকুজ্জামান", title: "হাফিযাহুল্লাহ" },
-    { name: "মাওলানা মুহাম্মদ যাইনুল আবেদীন", title: "হাফিযাহুল্লাহ" },
-    { name: "আহমেদ রফিক", title: "হাফিযাহুল্লাহ" },
-    { name: "আব্দুল্লাহ আল মাসউদ", title: "হাফিযাহুল্লাহ" },
-    { name: "মাওলানা জহিরুল ইসলাম সিরাজী", title: "হাফিযাহুল্লাহ" },
-    { name: "মাওলানা হুসাইন আহমাদ কাসেমী", title: "হাফিযাহুল্লাহ" },
-    { name: "মাওলানা মারুফ হুসাইন", title: "হাফিযাহুল্লাহ" },
-    { name: "সালেহ আহমেদ তোহা", title: "" },
-    { name: "মাহমুদ আকিব", title: "" },
-    { name: "মুহাম্মাদ রাফিউজ্জামান", title: "" },
-    { name: "তামিম মৃধা", title: "" },
+    // Upper row (left to right)
+    { name: "মুফতি তারিকুজ্জামান", title: "হাফিযাহুল্লাহ", hasImage: false },
+    { name: "মুহাম্মাদ রাফিউজ্জামান", title: "", hasImage: true },
+    { name: "মাওলানা মুহাম্মদ যাইনুল আবেদীন", title: "হাফিযাহুল্লাহ", hasImage: true },
+    { name: "সালেহ আহমেদ তোহা", title: "", hasImage: true },
+    { name: "মাহমুদ আকিব", title: "", hasImage: true },
+    // Middle two
+    { name: "মাওলানা হুসাইন আহমাদ কাসেমী", title: "হাফিযাহুল্লাহ", hasImage: true },
+    { name: "মাওলানা মারুফ হুসাইন", title: "হাফিযাহুল্লাহ", hasImage: true },
+    // Lower row
+    { name: "মাওলানা জহিরুল ইসলাম সিরাজী", title: "হাফিযাহুল্লাহ", hasImage: true },
+    { name: "তামিম মৃধা", title: "", hasImage: true },
+    { name: "আহমেদ রফিক", title: "হাফিযাহুল্লাহ", hasImage: true },
+    { name: "আব্দুল্লাহ আল মাসউদ", title: "হাফিযাহুল্লাহ", hasImage: true },
+    { name: "আহমেদ জুনাইদ", title: "", hasImage: true },
   ],
   
   benefits: [
