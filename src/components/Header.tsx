@@ -1,19 +1,19 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import kmsLogo from "@/assets/kms-logo.png";
 
 const navItems = [
   { name: "হোম", path: "/" },
-  { name: "আমাদের সম্পর্কে", path: "/about" },
-  { name: "ইভেন্ট", path: "/event" },
-  { name: "গ্যালারি", path: "/gallery" },
+  { name: "আমাদের সম্পর্কে", path: "#about" },
+  { name: "ইভেন্ট", path: "#event" },
+  { name: "পোস্ট", path: "#posts" },
+  { name: "নামাজের সময়", path: "#prayer" },
 ];
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
@@ -36,17 +36,13 @@ export function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-1">
           {navItems.map((item) => (
-            <Link
+            <a
               key={item.path}
-              to={item.path}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                location.pathname === item.path
-                  ? "bg-primary text-primary-foreground"
-                  : "text-foreground/80 hover:text-foreground hover:bg-muted"
-              }`}
+              href={item.path}
+              className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 text-foreground/80 hover:text-foreground hover:bg-muted"
             >
               {item.name}
-            </Link>
+            </a>
           ))}
         </nav>
 
@@ -66,18 +62,14 @@ export function Header() {
         <nav className="md:hidden border-t border-border bg-background animate-fade-in">
           <div className="container py-4 px-4 space-y-2">
             {navItems.map((item) => (
-              <Link
+              <a
                 key={item.path}
-                to={item.path}
+                href={item.path}
                 onClick={() => setIsOpen(false)}
-                className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                  location.pathname === item.path
-                    ? "bg-primary text-primary-foreground"
-                    : "text-foreground/80 hover:bg-muted"
-                }`}
+                className="block px-4 py-3 rounded-lg text-sm font-medium transition-colors text-foreground/80 hover:bg-muted"
               >
                 {item.name}
-              </Link>
+              </a>
             ))}
           </div>
         </nav>

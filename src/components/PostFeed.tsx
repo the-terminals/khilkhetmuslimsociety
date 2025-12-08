@@ -17,7 +17,7 @@ export function PostFeed() {
   };
 
   return (
-    <section className="py-16 md:py-20 bg-secondary/50">
+    <section id="posts" className="py-16 md:py-20 bg-secondary/50">
       <div className="container px-4">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
