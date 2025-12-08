@@ -60,17 +60,23 @@ export function PrayerTimes() {
     fetchPrayerTimes();
   }, []);
 
+  // Convert to Bengali numerals
+  const toBengaliNumerals = (num: string | number): string => {
+    const bengaliDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+    return num.toString().replace(/[0-9]/g, (d) => bengaliDigits[parseInt(d)]);
+  };
+
   // Convert 24h to 12h format with Bengali numerals
   const formatTime = (time: string) => {
     const [hours, minutes] = time.split(":");
     let h = parseInt(hours);
     const ampm = h >= 12 ? "PM" : "AM";
     h = h % 12 || 12;
-    return `${h}:${minutes} ${ampm}`;
+    return `${toBengaliNumerals(h)}:${toBengaliNumerals(minutes)} ${ampm}`;
   };
 
   return (
-    <section className="py-12 md:py-16 bg-primary text-primary-foreground">
+    <section id="prayer" className="py-12 md:py-16 bg-primary text-primary-foreground">
       <div className="container px-4">
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-2 mb-2">

@@ -2,8 +2,11 @@ export const eventData = {
   title: "ইয়ুথ রিভাইভাল কল",
   subtitle: "ওয়ে টু জান্নাহ",
   presenter: "ইসলাম জোন প্রেজেন্টস",
+  organizer: "খিলক্ষেত মুসলিম সোসাইটি",
   date: "১৩ই ডিসেম্বর, ২০২৫",
   dateISO: "2025-12-13T09:00:00+06:00",
+  location: "খিলক্ষেত, ঢাকা, বাংলাদেশ",
+  locationDetails: "খিলক্ষেত এলাকা, উত্তরা, ঢাকা-১২২৯",
   registrationLink: "https://ylnk.cc/kms",
   
   speakers: [
