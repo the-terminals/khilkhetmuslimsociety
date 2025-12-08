@@ -1,4 +1,20 @@
-import { Book, Mic } from "lucide-react";
+import { Book, Mic, Award, Star, Heart, Sparkles, Moon, Sun, BookOpen, Bookmark, GraduationCap, Crown, Lightbulb } from "lucide-react";
+
+// Unique icons for each speaker
+const speakerIcons = [
+  Book,        // মুফতি তারিকুজ্জামান
+  Star,        // মুহাম্মাদ রাফিউজ্জামান
+  Moon,        // মাওলানা মুহাম্মদ যাইনুল আবেদীন
+  Sparkles,    // সালেহ আহমেদ তোহা
+  Lightbulb,   // মাহমুদ আকিব
+  Crown,       // মাওলানা হুসাইন আহমাদ কাসেমী
+  Award,       // মাওলানা মারুফ হুসাইন
+  BookOpen,    // মাওলানা জহিরুল ইসলাম সিরাজী
+  Heart,       // তামিম মৃধা
+  GraduationCap, // আহমেদ রফিক
+  Bookmark,    // আব্দুল্লাহ আল মাসউদ
+  Sun,         // আহমেদ জুনাইদ
+];
 
 interface SpeakerCardProps {
   name: string;
@@ -6,15 +22,18 @@ interface SpeakerCardProps {
   hasImage: boolean;
   imageUrl?: string;
   delay?: number;
+  index?: number;
 }
 
-export function SpeakerCard({ name, title, hasImage, imageUrl, delay = 0 }: SpeakerCardProps) {
+export function SpeakerCard({ name, title, hasImage, imageUrl, delay = 0, index = 0 }: SpeakerCardProps) {
+  const IconComponent = speakerIcons[index % speakerIcons.length];
+  
   return (
     <div 
-      className="group relative animate-fade-up"
+      className="group relative animate-fade-up h-full"
       style={{ animationDelay: `${delay}ms` }}
     >
-      <div className="card-islamic p-4 text-center transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 hover:scale-105 overflow-hidden">
+      <div className="card-islamic p-4 text-center transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 hover:scale-105 overflow-hidden h-full flex flex-col">
         {/* Glow Effect */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-primary/5 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         
@@ -34,7 +53,7 @@ export function SpeakerCard({ name, title, hasImage, imageUrl, delay = 0 }: Spea
               />
             ) : (
               <div className="w-full h-full gradient-islamic flex items-center justify-center">
-                <Book className="h-8 w-8 text-primary-foreground" />
+                <IconComponent className="h-8 w-8 text-primary-foreground" />
               </div>
             )}
           </div>
@@ -46,7 +65,7 @@ export function SpeakerCard({ name, title, hasImage, imageUrl, delay = 0 }: Spea
         </div>
         
         {/* Name */}
-        <h4 className="font-bold text-foreground text-sm leading-tight mb-1 relative z-10 group-hover:text-primary transition-colors duration-300">
+        <h4 className="font-bold text-foreground text-sm leading-tight mb-1 relative z-10 group-hover:text-primary transition-colors duration-300 flex-grow">
           {name}
         </h4>
         

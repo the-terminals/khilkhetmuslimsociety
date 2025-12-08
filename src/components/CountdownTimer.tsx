@@ -11,6 +11,12 @@ interface CountdownTimerProps {
   targetDate: string;
 }
 
+// Convert English digits to Bengali digits
+const toBengaliDigits = (num: number): string => {
+  const bengaliDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+  return num.toString().padStart(2, '0').split('').map(digit => bengaliDigits[parseInt(digit)] || digit).join('');
+};
+
 export function CountdownTimer({ targetDate }: CountdownTimerProps) {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [isExpired, setIsExpired] = useState(false);
@@ -66,7 +72,7 @@ export function CountdownTimer({ targetDate }: CountdownTimerProps) {
           <div className="relative">
             <div className="w-16 h-16 md:w-20 md:h-20 bg-primary rounded-xl flex items-center justify-center shadow-lg animate-pulse-glow">
               <span className="text-2xl md:text-3xl font-bold text-primary-foreground">
-                {block.value.toString().padStart(2, "0")}
+                {toBengaliDigits(block.value)}
               </span>
             </div>
             <div className="absolute -top-1 -right-1 w-3 h-3 bg-accent rounded-full animate-ping" />
