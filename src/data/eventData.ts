@@ -13,19 +13,19 @@ export const eventData = {
   speakers: [
     // Upper row (left to right)
     { name: "মুফতি তারিকুজ্জামান", title: "হাফিযাহুল্লাহ", hasImage: false },
-    { name: "মুহাম্মাদ রাফিউজ্জামান", title: "", hasImage: true },
+    { name: "মুহাম্মাদ রাফিউজ্জামান", title: "হাফিযাহুল্লাহ", hasImage: true },
     { name: "মাওলানা মুহাম্মদ যাইনুল আবেদীন", title: "হাফিযাহুল্লাহ", hasImage: true },
-    { name: "সালেহ আহমেদ তোহা", title: "", hasImage: true },
-    { name: "মাহমুদ আকিব", title: "", hasImage: true },
+    { name: "সালেহ আহমেদ তোহা", title: "হাফিযাহুল্লাহ", hasImage: true },
+    { name: "মাহমুদ আকিব", title: "হাফিযাহুল্লাহ", hasImage: true },
     // Middle two
     { name: "মাওলানা হুসাইন আহমাদ কাসেমী", title: "হাফিযাহুল্লাহ", hasImage: true },
     { name: "মাওলানা মারুফ হুসাইন", title: "হাফিযাহুল্লাহ", hasImage: true },
     // Lower row
     { name: "মাওলানা জহিরুল ইসলাম সিরাজী", title: "হাফিযাহুল্লাহ", hasImage: true },
-    { name: "তামিম মৃধা", title: "", hasImage: true },
+    { name: "তামিম মৃধা", title: "হাফিযাহুল্লাহ", hasImage: true },
     { name: "আহমেদ রফিক", title: "হাফিযাহুল্লাহ", hasImage: true },
     { name: "আব্দুল্লাহ আল মাসউদ", title: "হাফিযাহুল্লাহ", hasImage: true },
-    { name: "আহমেদ জুনাইদ", title: "", hasImage: true },
+    { name: "আহমেদ জুনাইদ", title: "হাফিযাহুল্লাহ", hasImage: true },
   ],
   
   benefits: [
