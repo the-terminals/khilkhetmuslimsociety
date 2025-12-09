@@ -45,19 +45,19 @@ export function HeroSection() {
             <div className="flex flex-wrap justify-center gap-4 text-muted-foreground">
               <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm px-5 py-2.5 rounded-full border border-border">
                 <Calendar className="h-5 w-5 text-primary flex-shrink-0" />
-                <span className="font-medium font-bengali tracking-wide">১৩ই ডিসেম্বর, ২০২৫, শনিবার</span>
+                <span className="font-medium font-bengali-display text-base">১৩ই ডিসেম্বর, ২০২৫, শনিবার</span>
               </div>
               <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm px-5 py-2.5 rounded-full border border-border">
                 <Clock className="h-5 w-5 text-primary flex-shrink-0" />
-                <span className="font-medium font-bengali tracking-wide">সকাল ৯ টায়</span>
+                <span className="font-medium font-bengali-display text-base">সকাল ৯ টায়</span>
               </div>
               <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm px-5 py-2.5 rounded-full border border-border">
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
-                <span className="font-medium font-bengali tracking-wide">গ্রিন পার্ক, মোহাম্মদী হাউজিং, খিলক্ষেত, ঢাকা - ১২২৯</span>
+                <span className="font-medium font-bengali-display text-base">গ্রিন পার্ক, মোহাম্মদী হাউজিং, খিলক্ষেত, ঢাকা - ১২২৯</span>
               </div>
               <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm px-5 py-2.5 rounded-full border border-border">
                 <Wallet className="h-5 w-5 text-accent flex-shrink-0" />
-                <span className="font-medium font-bengali tracking-wide text-accent-foreground">রেজিস্ট্রেশন ফি: ৩৫০ টাকা</span>
+                <span className="font-medium font-bengali-display text-base text-accent-foreground">রেজিস্ট্রেশন ফি: ৩৫০ টাকা</span>
               </div>
             </div>
 
