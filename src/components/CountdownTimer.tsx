@@ -49,7 +49,7 @@ export function CountdownTimer({ targetDate }: CountdownTimerProps) {
   if (isExpired) {
     return (
       <div className="text-center py-4">
-        <p className="text-lg font-semibold text-accent">ইভেন্ট শুরু হয়ে গেছে!</p>
+        <p className="text-lg font-semibold text-accent font-bengali">ইভেন্ট শুরু হয়ে গেছে!</p>
       </div>
     );
   }
@@ -62,26 +62,31 @@ export function CountdownTimer({ targetDate }: CountdownTimerProps) {
   ];
 
   return (
-    <div className="flex justify-center gap-3 md:gap-4">
-      {timeBlocks.map((block, index) => (
-        <div
-          key={block.label}
-          className="flex flex-col items-center"
-          style={{ animationDelay: `${index * 0.1}s` }}
-        >
-          <div className="relative">
-            <div className="w-16 h-16 md:w-20 md:h-20 bg-primary rounded-xl flex items-center justify-center shadow-lg animate-pulse-glow">
-              <span className="text-2xl md:text-3xl font-bold text-primary-foreground">
-                {toBengaliDigits(block.value)}
-              </span>
+    <div className="space-y-4">
+      <p className="text-center text-muted-foreground font-bengali text-sm md:text-base">
+        ইভেন্ট শুরু হতে বাকি
+      </p>
+      <div className="flex justify-center gap-3 md:gap-4">
+        {timeBlocks.map((block, index) => (
+          <div
+            key={block.label}
+            className="flex flex-col items-center"
+            style={{ animationDelay: `${index * 0.1}s` }}
+          >
+            <div className="relative">
+              <div className="w-16 h-16 md:w-20 md:h-20 bg-primary rounded-2xl flex items-center justify-center shadow-lg animate-pulse-glow">
+                <span className="text-2xl md:text-3xl font-bold text-primary-foreground font-bengali tracking-wider">
+                  {toBengaliDigits(block.value)}
+                </span>
+              </div>
+              <div className="absolute -top-1 -right-1 w-3 h-3 bg-accent rounded-full animate-ping" />
             </div>
-            <div className="absolute -top-1 -right-1 w-3 h-3 bg-accent rounded-full animate-ping" />
+            <span className="mt-2 text-xs md:text-sm text-muted-foreground font-medium font-bengali">
+              {block.label}
+            </span>
           </div>
-          <span className="mt-2 text-xs md:text-sm text-muted-foreground font-medium">
-            {block.label}
-          </span>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
