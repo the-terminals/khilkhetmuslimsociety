@@ -1,9 +1,8 @@
-import { ArrowRight, Calendar, MapPin, Clock } from "lucide-react";
+import { ArrowRight, Calendar, MapPin, Clock, Wallet } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CountdownTimer } from "./CountdownTimer";
 import { eventData } from "@/data/eventData";
 import eventPoster from "@/assets/event-poster.png";
-
 export function HeroSection() {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden islamic-pattern">
@@ -43,18 +42,22 @@ export function HeroSection() {
             </div>
 
             {/* Event Details */}
-            <div className="flex flex-wrap justify-center gap-6 text-muted-foreground">
+            <div className="flex flex-wrap justify-center gap-4 text-muted-foreground">
               <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm px-4 py-2 rounded-full border border-border">
                 <Calendar className="h-5 w-5 text-primary" />
-                <span className="font-medium">{eventData.date}</span>
+                <span className="font-medium font-bengali">১৩ই ডিসেম্বর, ২০২৫, শনিবার</span>
               </div>
               <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm px-4 py-2 rounded-full border border-border">
                 <Clock className="h-5 w-5 text-primary" />
-                <span className="font-medium">{eventData.time}</span>
+                <span className="font-medium font-bengali">সকাল ৯ টায়</span>
               </div>
               <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm px-4 py-2 rounded-full border border-border">
                 <MapPin className="h-5 w-5 text-primary" />
-                <span className="font-medium">{eventData.location}, {eventData.locationDetails}</span>
+                <span className="font-medium font-bengali">গ্রিন পার্ক, মোহাম্মদী হাউজিং, খিলক্ষেত, ঢাকা - ১২২৯</span>
+              </div>
+              <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm px-4 py-2 rounded-full border border-border">
+                <Wallet className="h-5 w-5 text-accent" />
+                <span className="font-medium font-bengali text-accent-foreground">রেজিস্ট্রেশন ফি: ৩৫০ টাকা</span>
               </div>
             </div>
 
