@@ -4,7 +4,6 @@ import { HeroSection } from "@/components/HeroSection";
 import { AboutPreview } from "@/components/AboutPreview";
 import { EventSection } from "@/components/EventSection";
 import { PostFeed } from "@/components/PostFeed";
-import { PrayerTimes } from "@/components/PrayerTimes";
 
 const Index = () => {
   return (
@@ -15,7 +14,6 @@ const Index = () => {
         <AboutPreview />
         <EventSection />
         <PostFeed />
-        <PrayerTimes />
       </main>
       <Footer />
     </div>
