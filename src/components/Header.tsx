@@ -9,7 +9,6 @@ const navItems = [
   { name: "আমাদের সম্পর্কে", path: "#about" },
   { name: "ইভেন্ট", path: "#event" },
   { name: "পোস্ট", path: "#posts" },
-  { name: "নামাজের সময়", path: "#prayer" },
 ];
 
 export function Header() {
